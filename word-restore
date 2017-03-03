@@ -1,0 +1,51 @@
+def simple_variant(w):
+    if w.endswith("ed") and  w[:-1] in eight_word_set:
+        w = w[:-1]
+        flag = True
+        return w, flag
+    if w.endswith("ed") and w[:-2] in eight_word_set:
+        w = w[:-2]
+        flag = True
+        return w, flag
+    if w.endswith("ly") and w[:-2] in eight_word_set:
+        w = w[:-2]
+        flag = True
+        return w, flag
+    if w.endswith("est") and w[:-3] in eight_word_set:
+        w = w[:-3] 
+        flag = True
+        return w, flag
+    if w.endswith("er") and w[:-2] in eight_word_set:
+        w = w[:-2] 
+        flag = True
+        return w, flag
+    if w.endswith("ing") and w[:-3]+"e" in eight_word_set:
+        w = w[:-3] + "e"
+        flag = True
+        return w, flag
+    if w.endswith("ing") and w[:-3] in eight_word_set:
+        w = w[:-3]
+        flag = True
+        return w, flag
+    if w.endswith("ies") and w[:-3] + "y" in eight_word_set:
+        w=  w[:-3] + "y"
+        flag = True
+        return w, flag
+    if w.endswith("ied") and w[:-3] + "y" in eight_word_set:
+        w=  w[:-3] + "y"
+        flag = True
+        return w, flag
+    if  w.endswith("es") and w[:-1] in eight_word_set:
+        w = w[:-1]
+        flag = True
+        return w, flag
+    if w.endswith("es") and w[:-2] in eight_word_set:
+        w = w[:-2]
+        flag = True
+        return w, flag
+    if   w.endswith("s") and w[:-1] in eight_word_set:
+        w = w[:-1]
+        flag = True
+        return w, flag
+    flag = False
+    return w, flag
